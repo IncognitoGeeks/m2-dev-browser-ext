@@ -4,8 +4,14 @@ html {
 
 body {
   text-align: center;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 75%;
   padding: calc(1.25 * 1.25em);
   color: rgb(28, 28, 33);
+  margin: 14px;
+  width: 240px;
+  max-width: 240px;
+  box-sizing: content-box;
 }
 
 ol, ul {
