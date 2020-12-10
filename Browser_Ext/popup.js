@@ -92,7 +92,6 @@ $(document).ready(function() {
             url: ajaxUrl + route,
             type: 'GET',
             success: function(response) {
-                console.log("Response ", response);
                 if(loaderDiv != 'tempath_toggle') {
                     $("#" + loaderDiv + " .loader").remove();
                     $("#" + loaderDiv).prop('disabled', false);
@@ -102,6 +101,9 @@ $(document).ready(function() {
                     }else {
                         localStorage.setItem("tph", 0);
                     }
+                    if (typeof browser !== 'undefined') {
+                        return browser.tabs.reload();
+                    }
                     chrome.tabs.getSelected(null, function(tab) {
                         var code = 'window.location.reload();';
                         chrome.tabs.executeScript(tab.id, {code: code});
@@ -110,7 +112,7 @@ $(document).ready(function() {
                 MessageHelper.succesMsgHandler(response);
             },
             error: function (error) {
-                console.log("error", error);
+                console.error("error", error);
                 setTimeout(function() {
                     if(loaderDiv != 'tempath_toggle') {
                         $("#" + loaderDiv + " .loader").remove();
