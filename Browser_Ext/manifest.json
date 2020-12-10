@@ -5,7 +5,9 @@
   "permissions": [
     "activeTab",
     "storage",
-    "browsingData"
+    "browsingData",
+    "webRequest",
+    "<all_urls>"
   ],
   "browser_action": {
      "default_icon": "icon.png",
