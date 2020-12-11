@@ -89,6 +89,12 @@
     transform: translate(-50%, -50%);
 }
 
+.single-step:nth-of-type(3) { 
+    top: 43%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+}
+
 .single-step > span {
     position: relative;
     z-index: 1;

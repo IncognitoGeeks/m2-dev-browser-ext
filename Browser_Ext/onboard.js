@@ -11,16 +11,17 @@ $(document).ready(function() {
         appendNavigation(onboardSteps, stepsCount);
 
         if (!localStorage.getItem("firstTime")) {
-            console.log("First Time");
 
             onboardWrapper.addClass('active');
             showStep(onboardSteps.eq(0), overlay);
         }
 
-        stepInfo.on('click', '.nav_next', function(event){
+        stepInfo.on('click', '.nav_next', function(event) {
             //go to next step - if available
             function callback() {
-                $('.setting').click();
+                if($(event.target).data("stepno") === 0) {
+                    $('.setting').click();
+                }
             }
 			( !$(event.target).hasClass('inactive') ) && changeStep(onboardSteps, overlay, 'next', callback);
         });
@@ -46,7 +47,10 @@ $(document).ready(function() {
 				stepNumber = index + 1,
 				nextClass = ( stepNumber < n ) ? '' : 'inactive',
 				prevClass = ( stepNumber == 1 ) ? 'inactive' : '';
-			var nav = $(navigateHtml).find('.nav_next').addClass(nextClass).end().find('.nav_prev').addClass(prevClass).end().find('.actual-step').html(stepNumber).end().appendTo(step.children('.more-info'));
+            $(navigateHtml).find('.nav_next').attr('data-stepno', index).addClass(nextClass).end()
+                .find('.nav_prev').addClass(prevClass).end()
+                .find('.actual-step').html(stepNumber).end()
+                .appendTo(step.children('.more-info'));
         });
     }
 
