@@ -153,6 +153,11 @@ $(document).ready(function() {
     function clearBrowserCache() {
         var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
         var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
+
+        if (typeof browser !== 'undefined') {
+            return browsingData.removeCache();
+        }
+
         chrome.browsingData.remove({
             "since": oneWeekAgo
         }, {
