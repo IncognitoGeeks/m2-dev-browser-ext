@@ -12,9 +12,9 @@ Once installed and enabled, configure your local instance's BASE URL in the exte
 
 Check the connection status in extension after URL is entered.
 
-![alt text](https://github.com/G-Arvind/Magento-Chrome-Extension/blob/develop/Chrome_Ext/screen_shots/chrome_ext_settings.png "Settings")
-![alt text](https://github.com/G-Arvind/Magento-Chrome-Extension/blob/develop/Chrome_Ext/screen_shots/chrome_ext_url.png "Url")
-![alt text](https://github.com/G-Arvind/Magento-Chrome-Extension/blob/develop/Chrome_Ext/screen_shots/chrome_ext_status.png "Connection")
+![alt text](https://github.com/IncognitoGeeks/m2-dev-browser-ext/blob/master/Chrome_Ext/screen_shots/chrome_ext_settings.png "Settings")
+![alt text](https://github.com/IncognitoGeeks/m2-dev-browser-ext/blob/master/Chrome_Ext/screen_shots/chrome_ext_url.png "Url")
+![alt text](https://github.com/IncognitoGeeks/m2-dev-browser-ext/blob/master/Chrome_Ext/screen_shots/chrome_ext_status.png "Connection")
 
 
 ## Features
